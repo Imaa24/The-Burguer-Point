@@ -52,14 +52,14 @@ p{
 #box::before {
   bottom: -25px;
   right: -45px; 
-  background-image: url('./img/papas.png');
+  background-image: url('./papas.png');
   transform: rotate(35deg);
 }
 
 #box::after {
   top: -35px; 
   left: -35px; 
-  background-image: url('./img/burgeranima.png');
+  background-image: url('./burgeranima.png');
   transform: rotate(-20deg);
 }
 
