@@ -1,0 +1,397 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: #fff6ed;
+}
+
+header{
+    padding: 20px;
+}
+  
+main{
+    width: 45vw;
+    margin: auto;
+}
+
+section{
+    margin-bottom: 3%;
+}
+  
+p{
+    padding-left: 2px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+  
+
+#box{
+    border-style: solid;
+    border-color: #E8C39E;
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #fdecda;
+    position: relative;
+}
+
+#box::before, #box::after {
+  content: "";
+  position: absolute;
+  width: 90px; 
+  height: 90px; 
+  background-position: center center; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  z-index: 1; 
+}
+
+#box::before {
+  bottom: -25px;
+  right: -35px; 
+  background-image: url('./img/papas.png');
+  transform: rotate(35deg);
+}
+
+#box::after {
+  top: -35px; 
+  left: -25px; 
+  background-image: url('./img/burgeranima.png');
+  transform: rotate(-20deg);
+}
+
+#box img{
+    margin-top: 12px;
+    max-width: 25%;
+}
+
+#box h1{
+    color: #E8C39E;
+}
+
+.titulo{
+    display: flex;
+    background-color: #a0281d;
+    padding-top: 0.2px;
+    padding-bottom: 0.5px;
+    align-items: center;
+}
+
+.titulo h2{
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    flex: 1;
+}
+
+.elementsi{
+    background-color: #fdecda;
+    border: solid;
+    border-color: #E8C39E;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element img{
+    border-radius: 60px;
+    width: 100%;
+    height: 42%;
+    margin: 4px;
+}
+
+.element{
+    max-width: 23%;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.elements{
+    display: none;
+}
+
+i{
+    margin-left: 10px;
+    font-size: 32px;
+    color: white;
+}
+  
+i:hover{
+    cursor: pointer;
+}
+
+.element h3{
+    text-decoration: bold;
+    padding-left: 2px;
+}
+
+@media screen and (max-width:1001px){
+    main{
+        width: 75vw;
+    }
+    #box{
+        width: 65vw;
+    }
+    .elements{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .element{
+        max-width: 90%;
+    }
+    .element img{
+        width: 80%;
+    }
+}
+
+.btn{
+    margin-right: 20px;
+    background: blue;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.overlay {
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	padding: 20px;
+	text-align: center;
+	width: 600px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: black;
+}
+
+.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+
+.popup form .btn-submit {
+    padding: 0px 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	border-radius: 3px;
+	font-size: 20px;
+    font-weight: bold;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.popup input:valid{
+    background-color: white;
+}
+
+#btn-abrir-popup{
+    display: flex;
+    float: right;
+    color: black;
+}
+
+.element.active{
+    border: 2px solid red;
+}
+  
+#editModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35vw;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-size: 18px;
+}
+
+#editModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+#editModal .modal-content input{
+    width: 60%;
+    height: 30px;
+}
+
+#editModal .modal-content button{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#editModal .modal-content textarea{
+    width: 60%;
+    height: 60px;
+}
+
+#editModal h2 {
+    width: 100%;
+    font-size: 36px;
+    text-align: center; 
+}
+
+#editModal .modal-content label {
+    margin-top: 10px; 
+    width: 40%;
+}
+
+#editModal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+html{
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+}
+
+#addElementModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35vw;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    font-size: 18px;
+}
+
+#addElementModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+#addElementModal .modal-content input{
+    width: 60%;
+    height: 30px;
+}
+
+#addElementModal .modal-content button{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#addElementModal .modal-content textarea{
+    width: 60%;
+    height: 60px;
+}
+
+#addElementModal h2 {
+    width: 100%;
+    font-size: 36px;
+    text-align: center; 
+}
+
+#addElementModal .modal-content label {
+    margin-top: 10px; 
+    width: 40%;
+}
+
+#addElementModal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.titulo .fa-plus{
+    margin-right: 8px;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Menú</title>
+  <link rel= "icon" href= "./img/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css"> 
+   <script src="https://kit.fontawesome.com/a6bd3f295c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <i id="btn-abrir-popup" class="fa-solid fa-right-to-bracket"></i>
+    <div id= "box" >
+        <img src= "./img/logo.jpg" alt="logo">
+        <h1> Sabores que te hacen sonreír :) </h1>  
+    </div> 
+</header>
+<main> 
+    <section id= "menú">
+        <section id= "hamburguesas">
+            <div onclick= "toggleSection ('hamburguesas')" class= "titulo">
+                <i class=" fa-solid fa-arrow-down"></i>
+                <h2>Hamburguesas</h2>
+            </div>
+            <div class= "elements">
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220621103014.jpeg" alt= "Cheese Burger Simple + Papas Fritas">
+                    <h3>Cheese Burger Triple + Papas Fritas </h3>
+                    <p>Medallon x3 Cheddar Fetas x6</p>
+                </div>
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220621102905.jpeg" alt= "California simple + Papas fritas">
+                    <h3>California Simple + Papas Fritas</h3>
+                    <p> Medallón, cheddar x2, lechuga, tomate, cebolla, doble california sauce y papas fritas </p>
+                </div>
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220621103642.jpeg" alt= "Sweet Onion Doble + Papas Fritas">
+                    <h3>Sweet Onion Doble + Papas Fritas</h3>
+                    <p> Medallon x2 Cheddar Fetas x4 Bacon Cebolla Caramelizada</p>
+                </div>
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220621102840.jpeg" alt= "American Burger Simple + Papas Fritas">
+                    <h3>American Burger Simple + Papas Fritas</h3>
+                    <p>Medallon x 1 Cheddar Fetas x2 Tomate Lechuga Cebolla Cruda Dill Pickles Aderezo Thousand Island</p>
+                </div>
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220723101303.jpg" alt= "Royal Simple + Papas Fritas">
+                    <h3>Royal Simple + Papas Fritas</h3>
+                    <p> Medallon x1 Cheddar Fetas x2 Cebolla Cruda Ketchup Mostaza Pepino</p>
+                </div>
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220723101818.jpg" alt= "Stacked Bacon Simple + Papas Fritas">
+                    <h3>Stacked Bacon Simple + Papas Fritas</h3>
+                    <p> Medallón de x 1 + Cheddar fetas x 2 + Bacon ahumado por nosotros x 4 fetas + Relish sauce + Papas fritas</p>
+                </div>
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220723100536.jpg" alt= "Pesto Simple + Papas fritas">
+                    <h3>Pesto Simple + Papas fritas</h3>
+                    <p> Medallon x 1 + Cheddar fetas x 2 + Tomate + Pesto + Alioli + Papas fritas</p>
+                </div>
+                <div class= "element">
+                    <img src= "https://bigpons.com.ar/productos/20220621103148.jpeg" alt= "Meatfree Burger 0% Carne + Papas Fritas">
+                    <h3>Meatfree Burger 0% Carne + Papas Fritas</h3>
+                    <p>Medallon Plant Based x1 , Cheddar Fetas x2, Pickles de Pepino, Cebolla, Tomate, Lechuga, Mayonesa, Ketchup, Papas fritas</p>
+                </div>
+            </div>
+        </section>
+        <section id= "hotdogs">
+            <div onclick= "toggleSection ('hotdogs')" class= "titulo">
+                <i class=" fa-solid fa-arrow-down"></i>
+                <h2>Hot Dogs</h2>
+            </div>
+            <div class= "elements"> 
+                <div class= "element">
+                <img src= "https://www.emporiofiestas.com.ar/fotos/1623695286pancho.png" alt= "pancho">
+                <h3>Pancho simple</h3>
+                <p> Salchicha artesanal tipo alemana en pan de papa</p>
+                </div>
+            </div>
+        </section>
+        <section id= "bebidas">
+            <div onclick= "toggleSection ('bebidas')" class= "titulo">
+                <i class=" fa-solid fa-arrow-down"></i><h2> Bebidas </h2>
+            </div>
+            <div class= "elements">
+                <div class= "element">
+                    <img src="https://bigpons.com.ar/productos/20210422175748.png" alt= "Pepsi Regular"> 
+                    <h3> Pepsi Regular </h3>
+                    <p> 354ml </p>
+                </div>
+                <div class= "element">
+                    <img src="https://bigpons.com.ar/productos/20210422175823.png" alt= "Pepsi Black"> 
+                    <h3> Pepsi Black </h3>
+                        <p> 354ml </p>
+                </div>
+                <div class= "element">
+                    <img src="https://bigpons.com.ar/productos/20210422175902.png" alt= "Seven up Regular "> 
+                    <h3> Seven up Regular  </h3>
+                    <p> 354ml </p>
+                </div>
+                <div class= "element">
+                    <img src="https://bigpons.com.ar/productos/20210422180047.png" alt= "Seven Up Free  "> 
+                    <h3> Seven Up Free   </h3>
+                    <p> 354ml </p>
+                </div>
+                <div class= "element">
+                    <img src="https://bigpons.com.ar/productos/20210422180110.jpeg" alt= "Agua mineral  "> 
+                    <h3> Agua Mineral Sin Gas Eco de los Ande</h3>
+                        <p> 500ml </p>
+                </div>
+            </div> 
+        </section>
+        <section id= "postres"> 
+            <div onclick= "toggleSection ('postres')" class= "titulo">
+                <i class=" fa-solid fa-arrow-down"></i><h2> Postres </h2>
+            </div>
+            <div class= "elements">
+                <div class= "element"> 
+                    <img src= "https://marubotana.com/institucional/images/productos/Cuadrados/Brownie.webp" alt="Brownies">
+                    <h3> Brownies </h3>
+                    <p>Brownie de chocolate. </p>      
+                </div>
+                <div class= "element"> 
+                    <img src= "https://marubotana.com/institucional/images/productos/Cuadrados/Brownie_con_nueces.webp" alt="Brownies con nueces">
+                    <h3> Brownies con nueces </h3>
+                    <p>Brownie de chocolate con nueces. </p>      
+                </div>
+                <div class= "element"> 
+                    <img src= "https://marubotana.com/institucional/images/productos/Cuadrados/cuadrado_03.webp" alt="Frambuesas merengadas">
+                    <h3> Frambuesas merengadas </h3>
+                    <p>Masa dulce con mermelada de frambuesas, chips de chocolate, nueces y merengue seco. </p>      
+                </div>
+                <div class= "element"> 
+                    <img src= "https://marubotana.com/institucional/images/productos/Cuadrados/Limon.webp" alt="Limón">
+                    <h3> Limón </h3>
+                    <p> Masa dulce y cremoso de limón </p>      
+                </div>
+                <div class= "element"> 
+                    <img src= "https://marubotana.com/institucional/images/productos/Cuadrados/Oreo.webp" alt="Oreo">
+                    <h3> Oreo </h3>
+                    <p> Cuadrado de galletita oreo con chocolate blanco. </p>      
+                </div>
+                    </div>
+        </section>
+    </section>
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h3>Iniciar sesion</h3>
+            <form>
+                <div class="contenedor-inputs">
+                    <input type="text" placeholder="Nombre" name="txtNombre" id="txtNombre">
+                    <input type="text" placeholder="Contraseña" name="txtclave" id="txtclave">
+                </div>
+                <button type="button" class="btn-submit" onclick="guardar()">Iniciar</button>
+            </form>
+        </div>
+    </div><script src="./main.js"></script> 
+</main>
+</body>
+</html>
